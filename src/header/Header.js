@@ -1,9 +1,12 @@
 import'./Header';
+import { Link } from 'react-router-dom';
 
 
 function Header (props){
-    return(<>
-    <h1>Travel Destination</h1>
-    </>);
+    return(
+    <>
+   <Link to='/'>HOME</Link>
+    </>
+    );
 };
 export default Header;
