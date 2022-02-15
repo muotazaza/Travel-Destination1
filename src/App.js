@@ -1,29 +1,33 @@
 import logo from './logo.svg';
 import './App.css';
-import HOME from './home/Home';
+import Home from './home/Home';
+import Header from ' ./header/Header';
+import Footer from "./footer/Footer";
+import data from './data/db.json';
+import { Routes,Route } from "react-router-dom";
 
-function App() {
+function App(props) {
+  
   return (
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
-    <div>
-      <HOME />
-    </div>
+    <>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/city/:id' element={<TourDetails tour={data} />} />
+      </Routes>
+    </>
   );
+  
+
 }
 
 export default App;
+ //   return (
+    //     /
+    //     <div>
+
+    //       <Routes>
+    //
+    //             </Routes>
+
+    //     </div>
+    //   );
